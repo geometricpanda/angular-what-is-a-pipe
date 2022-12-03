@@ -1,27 +1,26 @@
-# WhatIsAPipe
+# Angular - What is a Pipe?
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+Angular Pipes are functions which run within the `Template` and allow us to transform data.
 
-## Development server
+They are used to format data for display, and are commonly used to format dates, currency, and strings.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+There are two types of pipes:
 
-## Code scaffolding
+- Pure Pipes
+- Impure Pipes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pure Pipes
 
-## Build
+Pure pipes are the default type of pipe. They are called pure because the Angular framework will call the
+pipe's `transform()` method only when it detects a pure change to the input value.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+A pure change is either a change to a primitive input value (String, Number, Boolean, Symbol) or a changed.
 
-## Running unit tests
+## Impure Pipes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Impure pipes are called impure because the Angular framework will call the pipe's `transform()` method
+every time it runs the `detectChanges()` cycle, regardless of whether the value or parameters have changed.
 
-## Running end-to-end tests
+## Reference:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- https://angular.io/guide/pipes

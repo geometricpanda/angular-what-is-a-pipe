@@ -1,0 +1,21 @@
+<div class="card h-100">
+  <div class="card-body">
+    <h2 class="card-title mb-3">Impure Example</h2>
+    <p class="card-subtitle mb-3">
+      The value is <code>{{ value | impureDemo }}</code>
+    </p>
+    <p class="card-text">
+      Impure pipes are called on every change detection cycle, even if the value has not changed.
+    </p>
+    <p class="card-text">
+      You can see this by clicking the buttons below, and checking the <code>console.log</code> output. You'll also
+      notice that any other changes on the page will trigger the pipe to be called again.
+    </p>
+  </div>
+  <div class="card-footer">
+    <div class="btn-group btn-group-sm">
+      <button (click)="increment()" class="btn btn-primary">Increment</button>
+      <button (click)="decrement()" class="btn btn-dark">Decrement</button>
+    </div>
+  </div>
+</div>

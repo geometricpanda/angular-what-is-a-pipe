@@ -1,0 +1,20 @@
+<div class="card h-100">
+  <div class="card-body">
+    <h2 class="card-title mb-3">Pure Example</h2>
+    <p class="card-subtitle mb-3">
+      The value is <code>{{ value | pureDemo }}</code>
+    </p>
+    <p class="card-text">
+      Pure pipes are only called when Angular detects a change to the value or the parameters passed to a pipe.
+    </p>
+    <p class="card-text">
+      You can see this by clicking the buttons below, and checking the <code>console.log</code> output.
+    </p>
+  </div>
+  <div class="card-footer">
+    <div class="btn-group btn-group-sm">
+      <button (click)="increment()" class="btn btn-primary">Increment</button>
+      <button (click)="decrement()" class="btn btn-dark">Decrement</button>
+    </div>
+  </div>
+</div>

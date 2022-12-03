@@ -1,0 +1,31 @@
+<div class="card h-100">
+  <div class="card-body">
+    <h2 class="card-title mb-3">Binding Example</h2>
+    <p class="card-subtitle mb-3">
+      The value is <code>{{ state }}</code>
+    </p>
+    <p class="card-text" [style.color]="state| bindingDemo">
+      In this example, when the pipe receives <code>true</code> it returns the colour <code>darkgreen</code>,
+      and when it receives <code>false</code> it returns the colour <code>darkred</code>.
+    </p>
+  </div>
+  <div class="card-footer">
+    <div class="btn-group btn-group-sm">
+      <button (click)="toggleOn()"
+              class="btn"
+              [attr.aria-pressed]="state"
+              [class.btn-success]="state"
+              [class.btn-dark]="!state">
+        True
+      </button>
+
+      <button (click)="toggleOff()"
+              class="btn"
+              [attr.aria-pressed]="!state"
+              [class.btn-success]="!state"
+              [class.btn-dark]="state">
+        False
+      </button>
+    </div>
+  </div>
+</div>
